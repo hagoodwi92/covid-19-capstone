@@ -1,11 +1,13 @@
+require('httparty')
+
 class Covid
 
   def initialize(state)
-    @state = state
+    @state = 'ga'
   end
 
   def get_rate
     response = HTTParty.get('https://api.covidtracking.com/v1/states/' + @state +  '/current.json')
-    return response
+    response ['positive']
   end
 end
