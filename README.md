@@ -1,24 +1,33 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Project's Purpose or Goal: Provide users with daily COVID outbreak reports. Stretch goals include displaying an outbreak map, as well as including other criteria to avoid states.
 
-Things you may want to cover:
+* MVP 
+Receive daily COVID cases by state from an outside source
 
-* Ruby version
+Compare states total COVID cases per day to determine hotspots(criteria TBD)
 
-* System dependencies
+For example, the criteria could be a threshold of daily cases determines a hotspot. TBD
 
-* Configuration
+* User Stories:
 
-* Database creation
+A user should be able to visit the homepage and see a list of states to avoid based on daily COVID case levels
 
-* Database initialization
+* Tools used:
+Ruby/Rails, Javascript. I believe I need more flexibility implementing this project, so I am going back to a programming language I am more comfortable with. I will be scraping daily COVID data from other sources(potentially an API if one exists). Lots of room for additional features with this project.
 
-* How to run the test suite
+* Stretch
 
-* Services (job queues, cache servers, search engines, etc.)
+"updated on"
 
-* Deployment instructions
+A map of the U.S. that shows outbreak rates by color
 
-* ...
+A state map of Oregon showing daily outbreak rates by county
+
+* Additional Tools 
+
+This project will require accurate daily COVID cases from an online source, such as the CDC or other reputable source. My additional goal of including a map will require additional tools if I have time to attempt this feature.
+
+* Misc
+
+This app is named States to Avoid. If I have additional time, I may include other reasons to avoid states, such as violence, crime, or other criteria. Thanks! 
