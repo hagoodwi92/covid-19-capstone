@@ -22,4 +22,13 @@ class Covid
     response = HTTParty.get('https://api.covidtracking.com/v1/us/current.json')
     response [0]['positiveIncrease'] 
   end
+
+  def update
+    response = HTTParty.get('https://api.covidtracking.com/v1/us/current.json')
+    response [0]['dateChecked']
+  end
+  def us_death
+    response = HTTParty.get('https://api.covidtracking.com/v1/us/current.json')
+    response [0]['deathIncrease'] 
+  end
 end

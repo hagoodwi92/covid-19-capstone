@@ -11,5 +11,7 @@ get('/') do
   @deaths = covid.get_rate
   @state = covid.get_state
   @positives = covid.get_positives
+  @update = covid.update
+  @usDeaths = covid.us_death
   erb(:covid)
 end

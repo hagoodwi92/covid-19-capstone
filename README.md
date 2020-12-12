@@ -20,9 +20,12 @@ https://www.highcharts.com/demo/maps/color-axis
 
 * Stretch
 
-"updated on"
+multiple states: avoid a state when it meets 3 criteria: bad covid rates, violence, bad weather, etc. avoid this state if meets criteria 
 
-styling
+
+make account, add your states to track. daily email 
+
+styling- added bootstrap, how do i use it now
 
 home page with cdc mask guidelines, video from fauci etc
 
