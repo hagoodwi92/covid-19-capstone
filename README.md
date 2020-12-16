@@ -19,6 +19,8 @@ Ruby/Rails, Javascript. I believe I need more flexibility implementing this proj
 
 Research: 
 
+https://gorails.com/forum/implementing-highcharts-in-ror
+
 https://www.highcharts.com/docs/maps/map-collection
 
 https://www.highcharts.com/demo/maps/color-axis
