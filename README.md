@@ -16,11 +16,20 @@ A user should be able to visit the homepage and see a list of states to avoid ba
 * Tools used:
 Ruby/Rails, Javascript. I believe I need more flexibility implementing this project, so I am going back to a programming language I am more comfortable with. I will be scraping daily COVID data from other sources(potentially an API if one exists). Lots of room for additional features with this project.
 
+
+Research: 
+
 https://www.highcharts.com/demo/maps/color-axis
 
 -https://www.highcharts.com/blog/posts/frameworks/ruby-on-rails/
 
 https://www.highcharts.com/blog/tutorials/i-am-ruby-developer-how-can-i-use-highcharts/
+
+https://www.highcharts.com/docs/maps/getting-started
+
+https://www.highcharts.com/docs/getting-started/your-first-chart
+
+https://www.highcharts.com/docs/maps/map-collection
 
 * Stretch
 
