@@ -18,6 +18,8 @@ Ruby/Rails, Javascript. I believe I need more flexibility implementing this proj
 
 https://www.highcharts.com/demo/maps/color-axis
 
+-
+
 * Stretch
 
 multiple states: avoid a state when it meets 3 criteria: bad covid rates, violence, bad weather, etc. avoid this state if meets criteria 
