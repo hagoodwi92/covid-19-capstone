@@ -18,7 +18,7 @@ Ruby/Rails, Javascript. I believe I need more flexibility implementing this proj
 
 https://www.highcharts.com/demo/maps/color-axis
 
--
+-https://www.highcharts.com/blog/posts/frameworks/ruby-on-rails/
 
 * Stretch
 
