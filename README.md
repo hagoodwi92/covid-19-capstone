@@ -20,6 +20,8 @@ https://www.highcharts.com/demo/maps/color-axis
 
 -https://www.highcharts.com/blog/posts/frameworks/ruby-on-rails/
 
+https://www.highcharts.com/blog/tutorials/i-am-ruby-developer-how-can-i-use-highcharts/
+
 * Stretch
 
 multiple states: avoid a state when it meets 3 criteria: bad covid rates, violence, bad weather, etc. avoid this state if meets criteria 

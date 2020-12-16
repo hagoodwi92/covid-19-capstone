@@ -1,5 +1,6 @@
 require('httparty')
 
+
 class Covid
 
   def initialize(state)
@@ -32,3 +33,4 @@ class Covid
     response [0]['deathIncrease'] 
   end
 end
+
