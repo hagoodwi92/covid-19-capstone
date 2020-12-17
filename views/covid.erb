@@ -21,22 +21,22 @@
           type: 'bar'
       },
       title: {
-          text: 'Fruit Consumption'
+          text: 'Covid Tracking'
       },
       xAxis: {
-          categories: ['US', 'OR', 'GA']
+          categories: ['Deaths', 'Cases']
       },
       yAxis: {
           title: {
-              text: 'Deaths Today'
+              text: 'Deaths/Cases Today'
           }
       },
       series: [{
           name: 'US Deaths today',
-          data: [<%= @usDeaths %>, , <%= @usDeaths %> ]
+          data: [<%= @usDeaths %>  ]
       }, {
-          name: 'John',
-          data: [5, 7, 3]
+          name: 'US Cases today',
+          data: [<%= @positives %>]
       }]
   });
 });</script>
