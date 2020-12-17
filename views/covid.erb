@@ -8,7 +8,11 @@
 
 <h4>State:</h4><p><%= @state %></p>
 
-<h4>Deaths today:</h4><p><%= @deaths %></p>
+<h4>Deaths today:</h4><p><%= @usDeaths %></p>
+
+<%@deathsPerMin = @usDeaths/1440 %>
+
+<h4>Deaths per minute in US:</h4><p><%= @deathsPerMin %></p>
 
 <h4>New Positives: </h4><p><p><%= @positives %></p>
 
@@ -36,7 +40,7 @@
           data: [<%= @usDeaths %>  ]
       }, {
           name: 'US Cases today',
-          data: [<%= @positives %>]
+          data: [<%= @usCases %>]
       }]
   });
 });</script>
