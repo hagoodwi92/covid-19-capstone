@@ -39,16 +39,19 @@ https://www.highcharts.com/docs/maps/map-collection
 
 * Stretch
 
-multiple states: avoid a state when it meets 3 criteria: bad covid rates, violence, bad weather, etc. avoid this state if meets criteria 
+search funtion to find a state, with state map even!
 
+A chart with data
+
+A map of the U.S. that shows outbreak rates by color
+
+multiple states: avoid a state when it meets 3 criteria: bad covid rates, violence, bad weather, etc. avoid this state if meets criteria 
 
 make account, add your states to track. daily email 
 
-styling- added bootstrap, how do i use it now
-
 home page with cdc mask guidelines, video from fauci etc
 
-A map of the U.S. that shows outbreak rates by color
+
 
 A state map of Oregon showing daily outbreak rates by county
 

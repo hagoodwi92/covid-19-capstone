@@ -24,16 +24,16 @@
           text: 'Fruit Consumption'
       },
       xAxis: {
-          categories: ['Apples', 'Bananas', 'Oranges']
+          categories: ['US', 'OR', 'GA']
       },
       yAxis: {
           title: {
-              text: 'Fruit eaten'
+              text: 'Deaths Today'
           }
       },
       series: [{
-          name: 'Jane',
-          data: [1, 0, <%= @usDeaths %> ]
+          name: 'US Deaths today',
+          data: [<%= @usDeaths %>, , <%= @usDeaths %> ]
       }, {
           name: 'John',
           data: [5, 7, 3]
