@@ -25,6 +25,8 @@ Ruby/Rails, Javascript. I believe I need more flexibility implementing this proj
 
 Research: 
 
+https://react-bootstrap.github.io/
+
 https://chartkick.com/
 
 https://gorails.com/forum/implementing-highcharts-in-ror
