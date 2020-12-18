@@ -49,21 +49,21 @@ https://www.highcharts.com/docs/maps/map-collection
 
 * Stretch
 
-all 50 states in the bar graph, daily new deaths 
+all 50 states in the bar graph, daily new deaths - done
 
-search funtion to find a state, with state map even!
+search funtion to find a state, with state map even! - fri
 
-A chart with data
+A chart with data - done 
 
-A map of the U.S. that shows outbreak rates by color
+A map of the U.S. that shows outbreak rates by color - stuck
 
-multiple states: avoid a state when it meets 3 criteria: bad covid rates, violence, bad weather, etc. avoid this state if meets criteria 
+multiple states: avoid a state when it meets 3 criteria: bad covid rates, violence, bad weather, etc. avoid this state if meets criteria- not doing
 
-make account, add your states to track. daily email 
+make account, add your states to track. daily email- probably not
 
-home page with cdc mask guidelines, video from fauci etc
+home page with cdc mask guidelines, video from fauci etc- yes
 
-A state map of Oregon showing daily outbreak rates by county
+A state map of Oregon showing daily outbreak rates by county- stretch
 
 * Additional Tools 
 

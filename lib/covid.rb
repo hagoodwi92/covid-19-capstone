@@ -7,6 +7,10 @@ class Covid
     @state = 'ga'
   end
 
+  def search(state)
+    
+  end
+
   def al
     response = HTTParty.get('https://api.covidtracking.com/v1/states/al/current.json')
     response ['deathIncrease'] 

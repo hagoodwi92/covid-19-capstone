@@ -16,6 +16,14 @@
 
 <h4>New Positives: </h4><p><p><%= @positives %></p>
 
+<form action="/search" method="post">
+  <div class="form-group">
+    <label for="state_name">State name</label>
+    <input id="n" name="state_name" class="form-control" type="text">
+  </div>
+  <button type="submit" class="btn">Go!</button>
+</form>
+
 
 <div id="container" style="width:100%; height:400px;"></div>
 

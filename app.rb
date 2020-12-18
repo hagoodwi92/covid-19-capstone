@@ -58,11 +58,13 @@ get('/') do
   @wi = covid.wi 
   @wy= covid.wy
 
-
-
   @usCases = covid.get_us
   @positives = covid.get_positives
   @update = covid.update
   @usDeaths = covid.us_death
   erb(:covid)
+end
+
+post ('/search') do
+
 end
