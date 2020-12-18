@@ -6,7 +6,7 @@ also_reload('lib/**/*.rb')
 
 
 get('/') do
-  covid = Covid.new(' ga')
+  covid = Covid.new('ga')
   @al = covid.al
   @ak = covid.ak
   @az = covid.az
@@ -59,12 +59,14 @@ get('/') do
   @wy= covid.wy
 
   @usCases = covid.get_us
-  @positives = covid.get_positives
   @update = covid.update
   @usDeaths = covid.us_death
   erb(:covid)
 end
 
 post ('/search') do
-
+  search = params[:state_name]
+  covid = Covid.new(search)
+  @search = covid.search
+  erb(:search)
 end

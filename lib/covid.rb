@@ -3,13 +3,30 @@ require('httparty')
 
 class Covid
 
-  def initialize(state)
-    @state = 'ga'
+  def initialize(search)
+    @search = search
   end
 
-  def search(state)
-    
+  def search()
+    response = HTTParty.get('https://api.covidtracking.com/v1/states/' + @search + '/current.json')
+    response [0]['deathIncrease'] 
   end
+
+  
+  def get_us
+    response = HTTParty.get('https://api.covidtracking.com/v1/us/current.json')
+    response [0]['positiveIncrease'] 
+  end
+
+  def update
+    response = HTTParty.get('https://api.covidtracking.com/v1/us/current.json')
+    response [0]['dateChecked']
+  end
+  def us_death
+    response = HTTParty.get('https://api.covidtracking.com/v1/us/current.json')
+    response [0]['deathIncrease'] 
+  end
+
 
   def al
     response = HTTParty.get('https://api.covidtracking.com/v1/states/al/current.json')
@@ -212,24 +229,7 @@ class Covid
     response = HTTParty.get('https://api.covidtracking.com/v1/states/wy/current.json')
     response ['deathIncrease'] 
   end
-  def get_positives
-    response = HTTParty.get('https://api.covidtracking.com/v1/states/' + @state +  '/current.json')
-    response ['positiveIncrease'] 
-  end
-  def get_us
-    response = HTTParty.get('https://api.covidtracking.com/v1/us/current.json')
-    response [0]['positiveIncrease'] 
-  end
-
-  def update
-    response = HTTParty.get('https://api.covidtracking.com/v1/us/current.json')
-    response [0]['dateChecked']
-  end
-  def us_death
-    response = HTTParty.get('https://api.covidtracking.com/v1/us/current.json')
-    response [0]['deathIncrease'] 
-  end
-
+  
 end
 
 
