@@ -25,6 +25,8 @@ Ruby/Rails, Javascript. I believe I need more flexibility implementing this proj
 
 Research: 
 
+https://github.com/reactjs/react-rails
+
 https://react-bootstrap.github.io/
 
 https://chartkick.com/
