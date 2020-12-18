@@ -66,7 +66,8 @@ end
 
 post ('/search') do
   search = params[:state_name]
+  @state = search.upcase
   covid = Covid.new(search)
-  @search = covid.search()
+  @search = covid.searchPos(search)
   erb(:search)
 end
