@@ -2,7 +2,7 @@
 
 Project's Purpose or Goal: Provide users with daily COVID outbreak reports. Stretch goals include displaying an outbreak map, as well as including other criteria to avoid states.
 
-* MVP 
+* MVP  
 Receive daily COVID cases by state from an outside source
 
 Compare states total COVID cases per day to determine hotspots(criteria TBD)
@@ -14,6 +14,12 @@ For example, the criteria could be a threshold of daily cases determines a hotsp
 A user should be able to visit the homepage and see a list of states to avoid based on daily COVID case levels
 
 * Tools used:
+
+Attempted to implement this in React. Repo here: https://github.com/hagoodwi92/covid-19-tracker-react. 
+
+Instead, I will implement this in Ruby/Rails as originally planned, and if I have time I will add rails-react for advanced styling. 
+
+
 Ruby/Rails, Javascript. I believe I need more flexibility implementing this project, so I am going back to a programming language I am more comfortable with. I will be scraping daily COVID data from other sources(potentially an API if one exists). Lots of room for additional features with this project.
 
 
@@ -39,6 +45,8 @@ https://www.highcharts.com/docs/maps/map-collection
 
 * Stretch
 
+all 50 states in the bar graph, daily new deaths 
+
 search funtion to find a state, with state map even!
 
 A chart with data
@@ -50,8 +58,6 @@ multiple states: avoid a state when it meets 3 criteria: bad covid rates, violen
 make account, add your states to track. daily email 
 
 home page with cdc mask guidelines, video from fauci etc
-
-
 
 A state map of Oregon showing daily outbreak rates by county
 
