@@ -15,6 +15,7 @@ get('/') do
   @co = covid.co
   @ct = covid.ct
   @de = covid.de
+  @fl= covid.fl
   @ga = covid.ga
   @hi = covid.hi
   @id = covid.id
