@@ -8,7 +8,7 @@
 
 <h4>State:</h4><p><%= @state %></p>
 
-<h4>Deaths today:</h4><p><%= @usDeaths %></p>
+<h4>Deaths today:</h4><p><%= @ga %></p>
 
 <%@deathsPerMin = @usDeaths/1440 %>
 
@@ -22,7 +22,7 @@
 <script>document.addEventListener('DOMContentLoaded', function () {
   const chart = Highcharts.chart('container', {
       chart: {
-          type: 'bar'
+          type: 'column'
       },
       title: {
           text: 'Covid Tracking'
@@ -32,16 +32,22 @@
       },
       yAxis: {
           title: {
-              text: 'Deaths/Cases Today'
+              text: 'Deaths By State Today'
           }
       },
       series: [{
-          name: 'US Deaths today',
-          data: [<%= @usDeaths %>  ]
+          name: 'GA Deaths today',
+          data: [<%= @ga %>  ]
       }, {
-          name: 'US Cases today',
-          data: [<%= @usCases %>]
-      }]
+          name: 'AL Deaths today',
+          data: [<%= @al %>]
+      },{
+        name: 'AK Deaths today',
+        data: [<%= @ak %>]
+    },{
+        name: 'AZ Deaths today',
+        data: [<%= @az %>]
+    },]
   });
 });</script>
 

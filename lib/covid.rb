@@ -7,9 +7,34 @@ class Covid
     @state = 'ga'
   end
 
-  def get_rate
-    response = HTTParty.get('https://api.covidtracking.com/v1/states/' + @state +  '/current.json')
-    response ['death'] 
+  def al
+    response = HTTParty.get('https://api.covidtracking.com/v1/states/al/current.json')
+    response ['deathIncrease'] 
+  end
+  def ak
+    response = HTTParty.get('https://api.covidtracking.com/v1/states/ak/current.json')
+    response ['deathIncrease'] 
+  end
+
+  def az
+    response = HTTParty.get('https://api.covidtracking.com/v1/states/az/current.json')
+    response ['deathIncrease'] 
+  end
+
+
+
+
+
+
+
+
+
+
+
+
+  def ga
+    response = HTTParty.get('https://api.covidtracking.com/v1/states/ga/current.json')
+    response ['deathIncrease'] 
   end
 
   def get_state
