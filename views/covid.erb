@@ -12,14 +12,14 @@
 <%@deathsPerMin = @usDeaths/1440 %>
 
 <h4>Deaths per minute in US:</h4><p><%= @deathsPerMin %></p>
-
 <form action="/search" method="post">
   <div class="form-group">
     <label for="state_name">Search by State Initials</label>
     <input id="n" name="state_name" class="form-control" type="text">
   </div>
-  <button type="submit" class="btn">Go!</button>
+  <button type="submit" class="btn-primary">Go!</button>
 </form>
+
 
 </div>
 </div>
