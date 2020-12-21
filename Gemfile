@@ -5,6 +5,8 @@ ruby '2.6.5'
 
 gem 'daru-view'
 
+gem 'react-rails'
+
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

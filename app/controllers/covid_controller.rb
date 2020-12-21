@@ -1,4 +1,4 @@
-def index
-  @rate = Covid.get_rate
-  render :covid
+class CovidController < ApplicationController
+  def index
+  end
 end
