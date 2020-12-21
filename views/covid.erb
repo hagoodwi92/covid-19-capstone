@@ -1,15 +1,13 @@
 
 <h1><div class = 'jumbotron' >Covid Tracker</div></h1>
 <div class = 'container'
-<div class = 'row' 
-<div class = 'col-xs-12' 
 <p><em>Last Updated:</em></p><%= @update %></p>
 
 <h4>Total New U.S. Cases today:</h4><p><%= @usCases.to_s.reverse.gsub(/(\d{3})(?=\d)/, '\\1,').reverse %></p>
 
 <h4>Total New U.S. Deaths today:</h4><p><%= @usDeaths.to_s.reverse.gsub(/(\d{3})(?=\d)/, '\\1,').reverse %></p>
 
-<%@deathsPerMin = @usDeaths/1440 %>
+<%= @deathsPerMin = (@usDeaths/1440) %>
 
 <h4>Deaths per minute in US:</h4><p><%= @deathsPerMin %></p>
 <form action="/search" method="post">

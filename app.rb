@@ -71,3 +71,9 @@ post ('/search') do
   @search = covid.searchPos(search)
   erb(:search)
 end
+
+
+get ('/back') do
+  redirect '/'
+end
+
