@@ -2,17 +2,16 @@ p {
   text-align: center;
 }
 
-.loading {
-  margin-top: 10em;
-  text-align: center;
-  color: gray;
-}
-
-#container {
-  height: 500px;
-  min-width: 310px;
-  max-width: 600px;
-  margin: 0 auto; 
+/* #container {
+  max-width: 400px; 
+  height: 360px; 
+  margin: 0 auto;
+  
+} */
+#table-div {
+  max-width: 400px;
+  margin: 3em auto;
+  
 }
 
 

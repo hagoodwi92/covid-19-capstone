@@ -2,76 +2,388 @@
 <script src="https://code.highcharts.com/maps/modules/data.js"></script>
 <script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
 <script src="https://code.highcharts.com/maps/modules/offline-exporting.js"></script>
-<script src="https://code.highcharts.com/mapdata/countries/us/us-all.js"></script>
+<script src="https://code.highcharts.com/mapdata/countries/us/custom/us-small.js"></script>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/">Covid-19 Tracker</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/chart">Chart</a>
+      </li>
+      <li class="nav-item ">
+      <a class="nav-link" href="/map">Map</a>
+      </li>
+    </ul>
+    <form action="/search"  method="post" class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" name='state_name' type="search" placeholder="Search by State" aria-label="Search" input id="n">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+
 
 <div id="container"></div>
-<script>
+<div id="table-div">
+    <table id="data">
+        <tr>
+            <td>1</td>
+            <td>HAWAII</td>
+            <td><%= @hi %></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>NEW HAMPSHIRE</td>
+            <td><%= @nh %></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>NORTH DAKOTA</td>
+            <td><%= @nd %></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>NEBRASKA</td>
+            <td><%= @ne %></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>IOWA</td>
+            <td><%= @ia %></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>VERMONT</td>
+            <td><%= @vt %></td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>IDAHO</td>
+            <td><%= @id %></td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>MAINE</td>
+            <td><%= @me %></td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>WISCONSIN</td>
+            <td><%= @wi %></td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>COLORADO</td>
+            <td><%= @co %></td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>MINNESOTA</td>
+            <td><%= @mn %></td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>UTAH</td>
+            <td><%= @ut %></td>
+        </tr>
+        <tr>
+            <td>13</td>
+            <td>TENNESSEE</td>
+            <td><%= @tn %></td>
+        </tr>
+        <tr>
+            <td>14</td>
+            <td>INDIANA</td>
+            <td><%= @in %></td>
+        </tr>
+        <tr>
+            <td>14</td>
+            <td>KANSAS</td>
+            <td><%= @ks %></td>
+        </tr>
+        <tr>
+            <td>16</td>
+            <td>ALABAMA</td>
+            <td><%= @al %></td>
+        </tr>
+        <tr>
+            <td>16</td>
+            <td>MASSACHUSETTS</td>
+            <td><%= @ms %></td>
+        </tr>
+        <tr>
+            <td>16</td>
+            <td>MISSOURI</td>
+            <td><%= @mi %></td>
+        </tr>
+        <tr>
+            <td>16</td>
+            <td>SOUTH DAKOTA</td>
+            <td><%= @sd %></td>
+        </tr>
+        <tr>
+            <td>20</td>
+            <td>ARKANSAS</td>
+            <td><%= @ar %></td>
+        </tr>
+        <tr>
+            <td>20</td>
+            <td>FLORIDA</td>
+            <td><%= @fl %></td>
+        </tr>
+        <tr>
+            <td>20</td>
+            <td>VIRGINIA</td>
+            <td><%= @va %></td>
+        </tr>
+        <tr>
+            <td>23</td>
+            <td>TEXAS</td>
+            <td><%= @tx %></td>
+        </tr>
+        <tr>
+            <td>24</td>
+            <td>MARYLAND</td>
+            <td><%= @md %></td>
+        </tr>
+        <tr>
+            <td>25</td>
+            <td>MONTANA</td>
+            <td><%= @mt %></td>
+        </tr>
+        <tr>
+            <td>25</td>
+            <td>OKLAHOMA</td>
+            <td><%= @ok %></td>
+        </tr>
+        <tr>
+            <td>25</td>
+            <td>OREGON</td>
+            <td><%= @or %></td>
+        </tr>
+        <tr>
+            <td>25</td>
+            <td>SOUTH CAROLINA</td>
+            <td><%= @sc %></td>
+        </tr>
+        <tr>
+            <td>29</td>
+            <td>WYOMING</td>
+            <td><%= @wi %></td>
+        </tr>
+        <tr>
+            <td>30</td>
+            <td>CALIFORNIA</td>
+            <td><%= @ca %></td>
+        </tr>
+        <tr>
+            <td>31</td>
+            <td>GEORGIA</td>
+            <td><%= @ga %></td>
+        </tr>
+        <tr>
+            <td>31</td>
+            <td>KENTUCKY</td>
+            <td><%= @ky %></td>
+        </tr>
+        <tr>
+            <td>31</td>
+            <td>RHODE ISLAND</td>
+            <td><%= @ri %></td>
+        </tr>
+        <tr>
+            <td>34</td>
+            <td>ARIZONA</td>
+            <td><%= @ar %></td>
+        </tr>
+        <tr>
+            <td>34</td>
+            <td>NORTH CAROLINA</td>
+            <td><%= @nc %></td>
+        </tr>
+        <tr>
+            <td>34</td>
+            <td>WASHINGTON</td>
+            <td><%= @wa %></td>
+        </tr>
+        <tr>
+            <td>37</td>
+            <td>CONNECTICUT</td>
+            <td><%= @ct %></td>
+        </tr>
+        <tr>
+            <td>37</td>
+            <td>DELAWARE</td>
+            <td><%= @de %></td>
+        </tr>
+        <tr>
+            <td>37</td>
+            <td>LOUISIANA</td>
+            <td><%= @la %></td>
+        </tr>
+        <tr>
+            <td>37</td>
+            <td>MISSISSIPPI</td>
+            <td><%= @ms %></td>
+        </tr>
+        <tr>
+            <td>37</td>
+            <td>NEW YORK</td>
+            <td><%= @ny %></td>
+        </tr>
+        <tr>
+            <td>42</td>
+            <td>MICHIGAN</td>
+            <td><%= @mi %></td>
+        </tr>
+        <tr>
+            <td>42</td>
+            <td>OHIO</td>
+            <td><%= @oh %></td>
+        </tr>
+        <tr>
+            <td>42</td>
+            <td>PENNSYLVANIA</td>
+            <td><%= @pa %></td>
+        </tr>
+        <tr>
+            <td>45</td>
+            <td>ILLINOIS</td>
+            <td><%= @il %></td>
+        </tr>
+        <tr>
+            <td>46</td>
+            <td>NEVADA</td>
+            <td><%= @nv %></td>
+        </tr>
+        <tr>
+            <td>46</td>
+            <td>NEW JERSEY</td>
+            <td><%= @nj %></td>
+        </tr>
+        <tr>
+            <td>48</td>
+            <td>WEST VIRGINIA</td>
+            <td><%= @wv %></td>
+        </tr>
+        <tr>
+            <td>49</td>
+            <td>NEW MEXICO</td>
+            <td><%= @nm %></td>
+        </tr>
+        <tr>
+            <td>51</td>
+            <td>ALASKA</td>
+            <td><%= @al %></td>
+        </tr>
+    </table>
+</div>
 
-Highcharts.getJSON('https://cdn.jsdelivr.net/gh/highcharts/highcharts@v7.0.0/samples/data/us-population-density.json', function (data) {
+<script>// Load the data from the HTML table and tag it with an upper case name used for joining
+var data = [],
+    // Get the map data
+    mapData = Highcharts.geojson(Highcharts.maps['countries/us/custom/us-small']);
 
-    // Make codes uppercase to match the map data
-    data.forEach(function (p) {
-        p.code = p.code.toUpperCase();
-    });
+Highcharts.data({
+    table: document.getElementById('data'),
+    startColumn: 1,
+    firstRowAsNames: false,
+    complete: function (options) {
+        options.series[0].data.forEach(function (p) {
+            data.push({
+                ucName: p[0],
+                value: p[1]
+            });
+        });
+    }
+});
 
-    // Instantiate the map
-    Highcharts.mapChart('container', {
+// Process mapdata
+mapData.forEach(function (p) {
+    var path = p.path,
+        copy = {
+            path: path
+        };
 
-        chart: {
-            map: 'countries/us/us-all',
-            borderWidth: 1
-        },
+    // This point has a square legend to the right
+    if (path[0][1] === 9727) {
 
-        title: {
-            text: 'US population density (/km²)'
-        },
+        // Identify the box
+        Highcharts.seriesTypes.map.prototype.getBox.call({}, [copy]);
 
-        exporting: {
-            sourceWidth: 600,
-            sourceHeight: 500
-        },
+        // Place the center of the data label in the center of the point legend box
+        p.middleX = ((path[0][1] + path[1][1]) / 2 - copy._minX) / (copy._maxX - copy._minX); // eslint-disable-line no-underscore-dangle
+        p.middleY = ((path[0][2] + path[2][2]) / 2 - copy._minY) / (copy._maxY - copy._minY); // eslint-disable-line no-underscore-dangle
 
-        legend: {
-            layout: 'horizontal',
-            borderWidth: 0,
-            backgroundColor: 'rgba(255,255,255,0.85)',
-            floating: true,
-            verticalAlign: 'top',
-            y: 25
-        },
+    }
 
-        mapNavigation: {
-            enabled: true
-        },
+    // Tag it for joining
+    p.ucName = p.name.toUpperCase();
+});
 
-        colorAxis: {
-            min: 1,
-            type: 'logarithmic',
-            minColor: '#EEEEFF',
-            maxColor: '#000022',
-            stops: [
-                [0, '#EFEFFF'],
-                [0.67, '#4444FF'],
-                [1, '#000022']
-            ]
-        },
+// Initiate the chart
+Highcharts.mapChart('container', {
 
-        series: [{
-            animation: {
-                duration: 1000
-            },
-            data: data,
-            joinBy: ['postal-code', 'code'],
-            dataLabels: {
-                enabled: true,
-                color: '#FFFFFF',
-                format: '{point.code}'
-            },
-            name: 'Population density',
-            tooltip: {
-                pointFormat: '{point.code}: {point.value}/km²'
+    title: {
+        text: 'Covid Deaths Today By State'
+    },
+
+    subtitle: {
+        text: 'United States'
+    },
+
+    mapNavigation: {
+        enabled: true,
+        enableButtons: false
+    },
+
+    xAxis: {
+        labels: {
+            enabled: false
+        }
+    },
+
+    colorAxis: {
+        labels: {
+            format: '{value}'
+        }
+    },
+
+    series: [{
+        mapData: mapData,
+        data: data,
+        joinBy: 'ucName',
+        name: 'Covid Deaths Today',
+        states: {
+            hover: {
+                color: '#a4edba'
             }
-        }]
-    });
+        },
+        dataLabels: {
+            enabled: true,
+            formatter: function () {
+                return this.point.properties['hc-a2'];
+            },
+            style: {
+                fontSize: '10px'
+            }
+        },
+        tooltip: {
+            valueSuffix: ''
+        }
+    }, {
+        type: 'mapline',
+        data: Highcharts.geojson(Highcharts.maps['countries/us/custom/us-small'], 'mapline'),
+        color: 'silver'
+    }]
 });
 </script>
