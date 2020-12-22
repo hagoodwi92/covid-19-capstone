@@ -29,17 +29,11 @@ https://github.com/reactjs/react-rails
 
 https://react-bootstrap.github.io/
 
-https://chartkick.com/
-
-https://gorails.com/forum/implementing-highcharts-in-ror
-
 https://www.highcharts.com/docs/maps/map-collection
 
 https://www.highcharts.com/demo/maps/color-axis
 
 -https://www.highcharts.com/blog/posts/frameworks/ruby-on-rails/
-
-https://www.highcharts.com/blog/tutorials/i-am-ruby-developer-how-can-i-use-highcharts/
 
 https://www.highcharts.com/docs/maps/getting-started
 
