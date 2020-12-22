@@ -12,6 +12,11 @@ class Covid
     response ['positiveIncrease']
   end
 
+  def searchDate(search)
+    response = HTTParty.get("https://api.covidtracking.com/v1/states/#{search}/current.json")
+    response ['date']
+  end
+
   
   def get_us
     response = HTTParty.get('https://api.covidtracking.com/v1/us/current.json')
