@@ -49,9 +49,11 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec-rails'
   gem 'launchy'
-  gem('sinatra')
+  source 'https://rubygems.org'
+  gem 'sinatra'
   gem 'pry'
   gem "sinatra-contrib",require: false
+  gem "rerun"
 end
 
 group :development do
