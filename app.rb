@@ -69,15 +69,17 @@ post ('/search') do
   if search.empty?
     return 'Please enter a state.'
     erb(:search)
-
-  elsif(search != 200)
-    return 'Please enter a valid state.'
   else 
     @state = search.upcase
     covid = Covid.new(search)
     @search = covid.searchPos(search)
+    if (@search.is_a? Integer )
+      erb(:search)
+    else
+      return 'Enter a valid state.'
+    end
   end
-    erb(:search)
+    
 end
 
 

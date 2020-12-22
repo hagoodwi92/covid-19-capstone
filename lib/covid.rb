@@ -9,7 +9,7 @@ class Covid
 
   def searchPos(search)
     response = HTTParty.get("https://api.covidtracking.com/v1/states/#{search}/current.json")
-    response ['positiveIncrease'] 
+    response ['positiveIncrease']
   end
 
   
