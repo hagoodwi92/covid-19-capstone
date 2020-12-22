@@ -26,15 +26,15 @@
   </div>
 </nav>
 
-
 <p><em>Last Updated:</em></p><%= @update %></p>
 
-<h2>Total New U.S. Cases Today:</h2><p><%= @usCases.to_s.reverse.gsub(/(\d{3})(?=\d)/, '\\1,').reverse %></p>
+<div class 'container'>
+<div class ='row'><div class 'col-sm'><h4>Total New U.S. Cases Today:</h2><p><%= @usCases.to_s.reverse.gsub(/(\d{3})(?=\d)/, '\\1,').reverse %></p></div>
 
-<h2>Total New U.S. Deaths Today:</h2><p><%= @usDeaths.to_s.reverse.gsub(/(\d{3})(?=\d)/, '\\1,').reverse %></p>
+<div class 'col-sm'><h4>Total New U.S. Deaths Today:</h2><p><%= @usDeaths.to_s.reverse.gsub(/(\d{3})(?=\d)/, '\\1,').reverse %></p></div>
 
+<div class 'col-sm'><% @deathsPerMin = (@usDeaths/1440) %>
+<h4>Deaths per minute in US:</h4><p><%= @deathsPerMin %></p></div></div></div>
 
-<% @deathsPerMin = (@usDeaths/1440) %>
-<h4>Deaths per minute in US:</h4><p><%= @deathsPerMin %></p>
 
 </body>
