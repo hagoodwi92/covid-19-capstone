@@ -25,22 +25,50 @@
   </div>
 </nav>
 
-<p><em>Last Updated:</em><%= @update %></p></p>
+<div class="jumbotron">
+  <h1 class="display-4" style="text-align:center;">United States COVID-19 Cases/Deaths</h1>
+  <p class="lead"></p>
+  <hr class="my-4">
+  <p></p>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" href="https://www.cdc.gov/coronavirus/2019-ncov/your-health/need-to-know.html" role="button">Current CDC Guidlines</a>
+  </p>
+</div>
+
+
 
 <div class="container">
+<p><em>Last Updated: </em><%= @update %></p></p>
   <div class="row">
     <div class="col-sm">
-    <h4>Total New U.S. Cases Today:<br></h2><p><%= @usCases.to_s.reverse.gsub(/(\d{3})(?=\d)/, '\\1,').reverse %></p>
+    <div class="card">
+    <div class="card-body">
+      <h4>New U.S. Cases Today:<br></h2><p><%= @usCases.to_s.reverse.gsub(/(\d{3})(?=\d)/, '\\1,').reverse %></p>
     </div>
-    <div class="col-sm">
-    <h4>Total New U.S. Deaths Today:</h2><p><%= @usDeaths.to_s.reverse.gsub(/(\d{3})(?=\d)/, '\\1,').reverse %></p>
-    </div>
-    <div class="col-sm">
-    <% @deathsPerMin = (@usDeaths/1440) %>
-    <h4>Deaths per minute in US:</h4><p><%= @deathsPerMin %></p>
     </div>
   </div>
+    
+  <div class="col-sm">
+  <div class="card">
+  <div class="card-body">
+    <h4>New U.S. Deaths Today:</h2><p><%= @usDeaths.to_s.reverse.gsub(/(\d{3})(?=\d)/, '\\1,').reverse %></p>
+  </div>
+  </div>
 </div>
+    
+    <div class="col-sm">
+    <div class="card">
+  <div class="card-body">
+  <% @deathsPerMin = (@usDeaths/1440) %>
+  <h4>Deaths per minute: U.S. </h4><p><%= @deathsPerMin %></p>
+  </div
+  </div>
+</div>
+    
+  </div>
+</div>
+
+
 
 
 
