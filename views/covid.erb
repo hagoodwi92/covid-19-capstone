@@ -9,38 +9,22 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
+        <a class="nav-link" href="/chart">Chart</a>
       </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
+      <li class="nav-item ">
+      <a class="nav-link" href="#">Map</a>
       </li>
     </ul>
     <form action="/search"  method="post" class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" name='state_name' type="search" placeholder="Search" aria-label="Search" input id="n">
+      <input class="form-control mr-sm-2" name='state_name' type="search" placeholder="Search by State" aria-label="Search" input id="n">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
   </div>
 </nav>
 
-<div class="jumbotron jumbotron-fluid">
-<div class="container">
-    <h1 class="display-4">Covid-19 Tracker</h1>
-</div>
-</div>
 <div class = 'container'
 <p><em>Last Updated:</em></p><%= @update %></p>
 
@@ -51,188 +35,7 @@
 
 <% @deathsPerMin = (@usDeaths/1440) %>
 <h4>Deaths per minute in US:</h4><p><%= @deathsPerMin %></p>
-<form action="/search" method="post">
-  <div class="form-group">
-    <label for="state_name">Search by State Initials</label>
-    <input id="n" name="state_name" class="form-control" type="text">
-  </div>
-  <button type="submit" class="btn-primary">Go!</button>
-</form>
 
-
-
-
-<div id="container" style="width:100%; height:400px;"></div>
-
-
-<script>document.addEventListener('DOMContentLoaded', function () {
-
-
-const chart = Highcharts.chart('container', {
-    chart: {
-        type: 'column'
-    },
-    title: {
-        text: 'Covid Tracking'
-    },
-    xAxis: {
-        categories: ['Deaths']
-    },
-    yAxis: {
-        title: {
-            text: 'Deaths By State Today'
-        }
-    },
-    series: [{
-        name: 'AL Deaths today',
-        data: [<%= @al %>]
-    },{
-        name: 'AK Deaths today',
-        data: [<%= @ak %>]
-    },{
-        name: 'AR Deaths today',
-        data: [<%= @ar %>]
-    },{
-        name: 'CA Deaths today',
-        data: [<%= @ca %>]
-    },{
-        name: 'CO Deaths today',
-        data: [<%= @co %>]
-    },{
-        name: 'CT Deaths today',
-        data: [<%= @ct %>]
-    },{
-        name: 'DE Deaths today',
-        data: [<%= @de %>]
-    },{
-        name: 'FL Deaths today',
-        data: [<%= @fl %>]
-    },{
-        name: 'GA Deaths today',
-        data: [<%= @ga %>]
-    },{
-        name: 'HI Deaths today',
-        data: [<%= @hi %>]
-    },{
-        name: 'ID Deaths today',
-        data: [<%= @id %>]
-    },{
-        name: 'IL Deaths today',
-        data: [<%= @il %>]
-    },{
-        name: 'IN Deaths today',
-        data: [<%= @in %>]
-    },{
-        name: 'IA Deaths today',
-        data: [<%= @ia %>]
-    },{
-        name: 'KS Deaths today',
-        data: [<%= @ks %>]
-    },{
-        name: 'KY Deaths today',
-        data: [<%= @ky %>]
-    },{
-        name: 'LA Deaths today',
-        data: [<%= @la %>]
-    },{
-        name: 'ME Deaths today',
-        data: [<%= @me %>]
-    },{
-        name: 'MD Deaths today',
-        data: [<%= @md %>]
-    },{
-        name: 'MA Deaths today',
-        data: [<%= @ma %>]
-    },{
-        name: 'MI Deaths today',
-        data: [<%= @mi %>]
-    },{
-        name: 'MN Deaths today',
-        data: [<%= @mn %>]
-    },{
-        name: 'MS Deaths today',
-        data: [<%= @ms %>]
-    },{
-        name: 'MO Deaths today',
-        data: [<%= @mo %>]
-    },{
-        name: 'MT Deaths today',
-        data: [<%= @mt %>]
-    },{
-        name: 'NE Deaths today',
-        data: [<%= @ne %>]
-    },{
-        name: 'NV Deaths today',
-        data: [<%= @nv %>]
-    },{
-        name: 'NH Deaths today',
-        data: [<%= @nh %>]
-    },{
-        name: 'NJ Deaths today',
-        data: [<%= @nj %>]
-    },{
-        name: 'NM Deaths today',
-        data: [<%= @nm %>]
-    },{
-        name: 'NY Deaths today',
-        data: [<%= @ny %>]
-    },{
-        name: 'NC Deaths today',
-        data: [<%= @nc %>]
-    },{
-        name: 'ND Deaths today',
-        data: [<%= @nd %>]
-    },{
-        name: 'OH Deaths today',
-        data: [<%= @oh %>]
-    },{
-        name: 'OK Deaths today',
-        data: [<%= @ok %>]
-    },{
-        name: 'OR Deaths today',
-        data: [<%= @or %>]
-    },{
-        name: 'PA Deaths today',
-        data: [<%= @pa %>]
-    },{
-        name: 'RI Deaths today',
-        data: [<%= @ri %>]
-    },{
-        name: 'SC Deaths today',
-        data: [<%= @sc %>]
-    },{
-        name: 'SD Deaths today',
-        data: [<%= @sd %>]
-    },{
-        name: 'TN Deaths today',
-        data: [<%= @tn %>]
-    },{
-        name: 'TX Deaths today',
-        data: [<%= @tx %>]
-    },{
-        name: 'UT Deaths today',
-        data: [<%= @ut %>]
-    },{
-        name: 'VT Deaths today',
-        data: [<%= @vt %>]
-    },{
-        name: 'VA Deaths today',
-        data: [<%= @va %>]
-    },{
-        name: 'WA Deaths today',
-        data: [<%= @wa %>]
-    },{
-        name: 'WV Deaths today',
-        data: [<%= @wv %>]
-    },{
-        name: 'WI Deaths today',
-        data: [<%= @wi %>]
-    },{
-        name: 'AZ Deaths today',
-        data: [<%= @az %>]
-    },]
-  });
-});</script>
 
 
 
