@@ -1,13 +1,14 @@
 source 'https://rubygems.org'
+
+gem('sinatra')
+gem('rspec')
+gem('pry')
+gem('sinatra-contrib')
+
+
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.5'
-
-gem 'daru-view'
-
-
-
-
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 
@@ -49,10 +50,10 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   
   gem 'launchy'
-  source 'https://rubygems.org'
-  gem 'sinatra'
-  gem 'pry'
-  gem "sinatra-contrib",require: false
+  # source 'https://rubygems.org'
+  # gem 'sinatra'
+  # gem 'pry'
+  # gem "sinatra-contrib",require: false
   gem "rerun"
 end
 
