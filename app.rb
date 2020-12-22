@@ -72,8 +72,7 @@ post ('/search') do
   else 
     @state = search.upcase
     covid = Covid.new(search)
-    @date = covid.searchDate(search)
-    @date = @date.Time.now.strftime("%F")
+    @stateDeaths = covid.searchDeaths(search)
     @search = covid.searchPos(search)
     if (@search.is_a? Integer )
       erb(:search)

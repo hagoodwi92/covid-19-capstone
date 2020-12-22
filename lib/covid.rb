@@ -12,9 +12,9 @@ class Covid
     response ['positiveIncrease']
   end
 
-  def searchDate(search)
+  def searchDeaths(search)
     response = HTTParty.get("https://api.covidtracking.com/v1/states/#{search}/current.json")
-    response ['date']
+    response ['deathIncrease']
   end
 
   
